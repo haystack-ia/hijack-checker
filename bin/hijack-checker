@@ -1,0 +1,20 @@
+#!/usr/bin/env python3
+
+'''
+Hijack Checker: a simple command line utility for checking for hijackable subdomains
+
+Usage:
+    hijack_checker <domain>
+'''
+
+from docopt import docopt
+from hijack_checker import can_hijack
+
+arguments = docopt(__doc__, version="Hijack Checker 0.1")
+check_domain = arguments['<domain>']
+if can_hijack(check_domain):
+    status = "HIJACK"
+else:
+    status = "CLEAR"
+
+print("{}: {}".format(check_domain, status))

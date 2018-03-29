@@ -1,0 +1,10 @@
+INSTALLATION INSTRUCTIONS
+
+Requires python3 with pip and setuptools
+
+INSTALLATION:
+    pip3 install .
+
+Dependencies should be handled automatically; if not, use the command:
+    pip3 install -r requirements.txt
+
